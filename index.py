@@ -7,3 +7,16 @@ def decorator(func):
 
 def get_called():
     print("I am the function and I am being called.")
+
+
+get_called = decorator(get_called)
+get_called()
+
+print()
+
+#THE DECORATED VERSION OF CODE (LINES 8 TO 13)
+@decorator
+def get_called():
+    print("I am the function and I am being called.")
+
+get_called()
